@@ -19,10 +19,18 @@ export default class ContactUs extends Component {
     e.preventDefault();
     console.log(this.state);
     try {
-      let result = await axios.post("/api/email", this.state);
+      let result = await axios.post(
+        "http://localhost:5000/api/email",
+        this.state
+      );
       console.log(result);
     } catch (err) {
       console.log(err);
+      this.setState({
+        email: "",
+        title: "",
+        message: ""
+      });
     }
   };
   render() {
