@@ -7,7 +7,7 @@ export default class ContactUs extends Component {
       email: "",
       title: "",
       message: "",
-      success:false
+      success: false
     };
   }
   handleChange = e => {
@@ -20,18 +20,15 @@ export default class ContactUs extends Component {
     e.preventDefault();
     console.log(this.state);
     try {
-      let result = await axios.post(
-        "http://localhost:5000/api/email",
-        this.state
-      );
-      if(result.status===200){
+      let result = await axios.post("/api/email", this.state);
+      if (result.status === 200) {
         this.setState({
-          success:true
-        })
-      }else{
+          success: true
+        });
+      } else {
         this.setState({
-          success:false
-        })
+          success: false
+        });
       }
     } catch (err) {
       console.log(err);
@@ -82,7 +79,7 @@ export default class ContactUs extends Component {
                 placeholder="enter you message here"
                 onChange={this.handleChange}
               />
-              {this.state.success?<p>Mail Sent</p>:null}
+              {this.state.success ? <p>Mail Sent</p> : null}
               <button type="submit" className="full-width">
                 Send
               </button>
