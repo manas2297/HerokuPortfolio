@@ -6,7 +6,8 @@ export default class ContactUs extends Component {
     this.state = {
       email: "",
       title: "",
-      message: ""
+      message: "",
+      success:false
     };
   }
   handleChange = e => {
@@ -23,7 +24,15 @@ export default class ContactUs extends Component {
         "http://localhost:5000/api/email",
         this.state
       );
-      console.log(result);
+      if(result.status===200){
+        this.setState({
+          success:true
+        })
+      }else{
+        this.setState({
+          success:false
+        })
+      }
     } catch (err) {
       console.log(err);
       this.setState({
@@ -73,6 +82,7 @@ export default class ContactUs extends Component {
                 placeholder="enter you message here"
                 onChange={this.handleChange}
               />
+              {this.state.success?<p>Mail Sent</p>:null}
               <button type="submit" className="full-width">
                 Send
               </button>
