@@ -365,38 +365,68 @@ ul#nav li.current a {
 
 .photoshop {
   width: 60%;
-  -moz-animation: photoshop 2s ease;
-  -webkit-animation: photoshop 2s ease;
+  --moz-animation: photoshop 2s ease;
+  --webkit-animation: photoshop 2s ease;
 }
 .illustrator {
-  width: 55%;
-  -moz-animation: illustrator 2s ease;
-  -webkit-animation: illustrator 2s ease;
+  width: 65%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.nodejs {
+  width: 70%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.reactjs {
+  width: 80%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.expressjs {
+  width: 80%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.redux {
+  width: 70%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.cpp {
+  width: 80%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
+}
+.mongodb {
+  width: 65%;
+  --moz-animation: illustrator 2s ease;
+  --webkit-animation: illustrator 2s ease;
 }
 .wordpress {
   width: 50%;
-  -moz-animation: wordpress 2s ease;
-  -webkit-animation: wordpress 2s ease;
+  --moz-animation: wordpress 2s ease;
+  --webkit-animation: wordpress 2s ease;
 }
-.css {
+.css3 {
   width: 90%;
-  -moz-animation: css 2s ease;
-  -webkit-animation: css 2s ease;
+  --moz-animation: css 2s ease;
+  --webkit-animation: css 2s ease;
 }
 .html5 {
   width: 80%;
-  -moz-animation: html5 2s ease;
-  -webkit-animation: html5 2s ease;
+  --moz-animation: html5 2s ease;
+  --webkit-animation: html5 2s ease;
 }
 .jquery {
   width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  --moz-animation: jquery 2s ease;
+  --webkit-animation: jquery 2s ease;
 }
 .python3 {
   width: 50%;
-  -moz-animation: jquery 2s ease;
-  -webkit-animation: jquery 2s ease;
+  --moz-animation: jquery 2s ease;
+  --webkit-animation: jquery 2s ease;
 }
 @-moz-keyframes photoshop {
   0% {
@@ -740,7 +770,8 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-  background: #1f1f1f url(../images/164622.jpg) no-repeat center center;
+  /* background: url(../images/164622.jpg) no-repeat center center; */
+  background: linear-gradient(135deg, #208379 20%, #051514 90%);
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
