@@ -326,7 +326,10 @@ ul#nav li.current a {
 
 .bars {
   width: 95%;
-  float: left;
+  /* float: left; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 0;
   text-align: left;
 }

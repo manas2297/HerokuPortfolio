@@ -1041,7 +1041,7 @@ properly.
 --------------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
   .row {
-    width: 460px;
+    width: auto;
     margin: 0 auto;
     padding: 0;
   }
@@ -1056,7 +1056,7 @@ properly.
   .row .row {
     width: auto;
     max-width: none;
-    margin: 0 -30px;
+    margin: 0 -10px;
   }
 
   [class*="column"] + [class*="column"]:last-child {
@@ -1104,7 +1104,7 @@ properly.
 
 /* mobile narrow
 --------------------------------------------------------------- */
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 400px) {
   .row {
     width: auto;
   }
