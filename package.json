@@ -17,6 +17,9 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "nodemailer": "^6.3.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.1.1",
+    "prismic-reactjs": "^1.1.1",
     "wpapi": "^1.2.1"
   },
   "devDependencies": {

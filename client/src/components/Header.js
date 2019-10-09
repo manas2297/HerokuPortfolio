@@ -1,4 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import {
+  Link as NavLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
 export default class Header extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -14,34 +23,85 @@ export default class Header extends Component {
             </a>
             <ul id="nav" className="nav">
               <li className="current">
-                <a className="smoothscroll" href="#home">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={10}
+                  duration={800}
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className="smoothscroll" href="#about">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={10}
+                  duration={800}
+                >
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className="smoothscroll" href="#resume">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="resume"
+                  spy={true}
+                  smooth={true}
+                  offset={5}
+                  duration={800}
+                >
                   Resume
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className="smoothscroll" href="#portfolio">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={5}
+                  duration={800}
+                >
                   Works
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className="smoothscroll" href="#testimonials">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="testimonials"
+                  spy={true}
+                  smooth={true}
+                  offset={5}
+                  duration={800}
+                >
                   Testimonials
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className="smoothscroll" href="#contact">
+                <NavLink
+                  activeClass="active"
+                  className="pointer"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={5}
+                  duration={800}
+                >
                   Contact
-                </a>
+                </NavLink>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
               </li>
             </ul>
           </nav>
@@ -69,9 +129,17 @@ export default class Header extends Component {
           </div>
 
           <p className="scrolldown">
-            <a className="smoothscroll" href="#about">
+            <NavLink
+              activeClass="active"
+              className="pointer"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={5}
+              duration={800}
+            >
               <i className="icon-down-circle"></i>
-            </a>
+            </NavLink>
           </p>
         </header>
       </React.Fragment>
