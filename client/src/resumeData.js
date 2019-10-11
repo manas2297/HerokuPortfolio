@@ -81,22 +81,22 @@ let resumeData = {
   portfolio: [
     {
       name: "project1",
-      description: "mobileapp",
+      description: "ConnectMe",
       imgurl: "./images/portfolio/origami.jpg"
     },
     {
       name: "project2",
-      description: "mobileapp",
+      description: "CodeIt",
       imgurl: "images/portfolio/coffee.jpg"
     },
     {
       name: "project3",
-      description: "mobileapp",
+      description: "PortFolio",
       imgurl: "images/portfolio/judah.jpg"
     },
     {
       name: "project4",
-      description: "mobileapp",
+      description: "Node Chat Application",
       imgurl: "images/portfolio/retrocam.jpg"
     }
   ],
