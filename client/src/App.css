@@ -1,3 +1,16 @@
 .pointer {
   cursor: pointer;
 }
+
+.blog-home {
+  display: flex;
+  flex-direction: column;
+}
+.blog-heading {
+  padding: 2em;
+  display: block;
+  text-align: center;
+}
+.blog-image img {
+  height: auto;
+}
