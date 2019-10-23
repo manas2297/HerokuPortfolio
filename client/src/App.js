@@ -10,22 +10,21 @@ import resumeData from "./resumeData";
 import Blog from "./components/Blog/blog";
 import { Switch, Route } from "react-router-dom";
 import Landing from "./components/Landing/Landing";
+import Client from "./config/PrismicApp";
+import Post from "./components/Blog/post";
 import "./App.css";
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <Landing />
-          </Route>
-          <Route exact path="/blog">
-            <Blog />
-          </Route>
-        </Switch>
-      </div>
-    );
-  }
-}
+const App = props => (
+  <div className="App">
+    <Switch>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route exact path="/blog">
+        <Blog />
+      </Route>
+      <Route exact path="/blog/:uid" component={Post} />
+    </Switch>
+  </div>
+);
 
 export default App;
