@@ -82,7 +82,7 @@ let resumeData = {
     {
       name: "project1",
       description: "ConnectMe",
-      imgurl: "./images/portfolio/origami.jpg"
+      imgurl: "./images/portfolio/connectme.png"
     },
     {
       name: "project2",
