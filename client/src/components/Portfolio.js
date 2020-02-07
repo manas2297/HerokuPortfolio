@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 export default class Porfolio extends Component {
-  render() {
+  render () {
     let resumeData = this.props.resumeData;
     return (
       <section id="portfolio">
@@ -11,24 +11,24 @@ export default class Porfolio extends Component {
               id="portfolio-wrapper"
               className="bgrid-quarters s-bgrid-thirds cf"
             >
-              {resumeData.portfolio &&
-                resumeData.portfolio.map(item => {
+              { resumeData.portfolio &&
+                resumeData.portfolio.map( item => {
                   return (
                     <div className="columns portfolio-item">
                       <div className="item-wrap">
-                        <a href="https://github.com/CronjManas/ConnectMe">
-                          <img src={`${item.imgurl}`} className="item-img" />
+                        <a href={ `${ item.projectUrl }` } target='_blank'>
+                          <img src={ `${ item.imgurl }` } className="item-img" />
                           <div className="overlay">
                             <div className="portfolio-item-meta">
-                              <h5>{item.name}</h5>
-                              <p>{item.description}</p>
+                              <h5>{ item.name }</h5>
+                              <p>{ item.description }</p>
                             </div>
                           </div>
                         </a>
                       </div>
                     </div>
                   );
-                })}
+                } ) }
             </div>
           </div>
         </div>

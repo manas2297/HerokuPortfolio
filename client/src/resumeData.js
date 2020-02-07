@@ -82,22 +82,26 @@ let resumeData = {
     {
       name: "project1",
       description: "ConnectMe",
-      imgurl: "./images/portfolio/connectme.png"
+      imgurl: "./images/portfolio/connectme.png",
+      projectUrl: "https://www.google.com/"
     },
     {
       name: "project2",
       description: "CodeIt",
-      imgurl: "images/portfolio/coffee.jpg"
+      imgurl: "images/portfolio/coffee.jpg",
+      projectUrl: "https://www.google.com/"
     },
     {
       name: "project3",
       description: "PortFolio",
-      imgurl: "images/portfolio/judah.jpg"
+      imgurl: "images/portfolio/judah.jpg",
+      projectUrl: "https://www.google.com/"
     },
     {
       name: "project4",
       description: "Node Chat Application",
-      imgurl: "images/portfolio/retrocam.jpg"
+      imgurl: "images/portfolio/retrocam.jpg",
+      projectUrl: "https://www.google.com/"
     }
   ],
   testimonials: [
