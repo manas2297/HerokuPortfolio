@@ -122,7 +122,15 @@
 /*
    * Blog posts
    */
-
+.block-img {
+  text-align: center;
+}
+.image-render img {
+  width: 50% !important;
+  height: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
 .outer-container {
   max-width: 700px;
   margin-left: auto;

@@ -11,7 +11,7 @@ export default class ImageCaption extends React.Component {
   defaultView() {
     return (
       <div className="post-part single container">
-        <div className="block-img">
+        <div className="block-img image-render">
           <img src={this.state.imageUrl} alt={this.state.imageAlt} />
           {RichText.asText(this.state.caption) !== "" ? (
             <p>
