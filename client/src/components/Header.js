@@ -8,109 +8,50 @@ import {
   scrollSpy,
   scroller
 } from "react-scroll";
+import Typist from 'react-typist';
 export default class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      animateTextNumber: 1,
+    }
+  }
+  animateText = () => {
+    console.log("here")
+    if(this.state.animateTextNumber === 1) {
+      console.log("here2")
+      this.setState({
+        animateTextNumber: 2,
+      })
+    } else {
+      this.setState({
+        animateTextNumber: 1,
+      })
+    }
+  }
   render() {
+    console.log(this.state.animateTextNumber)
     let resumeData = this.props.resumeData;
     return (
       <React.Fragment>
         <header id="home">
-          <nav id="nav-wrap">
-            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-              Show navigation
-            </a>
-            <a className="mobile-btn" href="#" title="Hide navigation">
-              Hide navigation
-            </a>
-            <ul id="nav" className="nav">
-              <li className="current">
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={10}
-                  duration={800}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={10}
-                  duration={800}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="resume"
-                  spy={true}
-                  smooth={true}
-                  offset={5}
-                  duration={800}
-                >
-                  Resume
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={5}
-                  duration={800}
-                >
-                  Works
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="testimonials"
-                  spy={true}
-                  smooth={true}
-                  offset={5}
-                  duration={800}
-                >
-                  Testimonials
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  activeClass="active"
-                  className="pointer"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={5}
-                  duration={800}
-                >
-                  Contact
-                </NavLink>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-            </ul>
-          </nav>
-
           <div className="row banner">
             <div className="banner-text">
-              <h1 className="responsive-headline">I am {resumeData.name}.</h1>
+            
+              <h1 className="responsive-headline">
+              <Typist
+                  cursor={{show:true, blink: true, element: '|' }}
+                >
+                Hi!!! I am {resumeData.name}. 
+                  </Typist>
+              </h1>
               <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
+              <Typist
+                avgTypingDelay={20}
+              >
+              <Typist.Delay ms={500}/>
                 {resumeData.role}.{resumeData.roleDescription}
+              </Typist>
               </h3>
               <hr />
               <ul className="social">
