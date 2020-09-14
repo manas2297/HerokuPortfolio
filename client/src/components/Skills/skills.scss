@@ -1,0 +1,46 @@
+@import "../../assets/customVars.scss";
+.skills{
+  margin-top: -8rem;
+  padding-bottom: 40px;
+  &__box{
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+    padding: 0;
+    
+  }
+  .columns{
+    .column{
+      padding: 2.5rem 2rem;
+      border-right: 1px solid $border-grey ;
+      &:first-child{
+        
+      }
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+  svg{
+    height: 50px;
+    width: 50px;
+    stroke-width: 4px !important;
+    font-size: 30em;
+    font-weight: 100;
+    
+  }
+  h2{
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: $awe-dark;
+  }
+  h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $primary-theme;
+    padding-top: 1.5rem;
+  }
+  p{
+    font-size: 1.1em;
+    color: $awe-dark;
+  }
+}

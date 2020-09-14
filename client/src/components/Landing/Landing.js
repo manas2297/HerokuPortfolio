@@ -8,6 +8,7 @@ import Testimonials from "../Testimonials";
 import ContactUs from "../ContactUs";
 import Footer from "../Footer";
 import Header from '../Header'
+import Skills from "../Skills";
 // import Header from '../Header/index'
 const About = React.lazy(() => import('../About'));
 class Landing extends React.Component {
@@ -21,6 +22,7 @@ class Landing extends React.Component {
         <Suspense fallback={"Loading"}>
           <About resumeData={resumeData} />
         </Suspense> 
+        <Skills resumeData={resumeData}/>
         
          {/* <Resume resumeData={resumeData} /> */}
         {/*<Portfolio resumeData={resumeData} />

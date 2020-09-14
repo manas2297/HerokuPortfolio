@@ -24,7 +24,7 @@ let resumeData = {
     }
   ],
   aboutme:
-    "Working as a Software Developer with an experience of 1.3 years. I have worked with startups, collaborated with talented people to deliver high quality products. I like exploring large scale applications and solving problems through my code. ",
+    "I'm Software Developer with an industry experience of 1.3 years. I have worked with startups, collaborated with talented people to deliver high quality products. I like exploring large scale applications and solving problems through my code. ",
   address: "Bengaluru,India",
   website: "https://mighty-river-90021.herokuapp.com/",
   education: [
@@ -38,15 +38,30 @@ let resumeData = {
   ],
   work: [
     {
-      CompanyName: "Developer",
-      specialization: "Actively looking for Jobs",
-      MonthOfLeaving: "December",
-      YearOfLeaving: "2019",
-      Achievements: "Web Developer|Fullstack Developer"
+      CompanyName: "CronJ IT Technologies PVT. LTD.",
+      specialization: "Software Developer",
+      MonthOfLeaving: "June",
+      YearOfLeaving: "2020",
+    },
+    {
+      CompanyName: 'Somnoware Healthcare Systems',
+      specialization: "React | Node.js",
+      MonthOfJoining: "June",
+      YearOfJoining: "2020",
     }
   ],
-  skillsDescription: "Your skills here",
+  codingDescription: "I have been doing CP from past 4 years. I Have good understanding of Advanced DS and Algo.",
+  codingLanguages: "C++, C, Javascript",
+  codingPlatforms: ["Hackerank","Hackerearth", "Codechef", "Codefores", "Scaler Academy", "GeeksforGeeks"],
+  designDescription: "People ignore design that ignores people. So love to do it simple, attractive and clean. Still learning to be one of the best.",
+  designSkills: ['Web', 'UI', 'UX', 'Logos', 'Posters'],
+  designTools:['Figma', 'Adobe illustrator', 'Adobe Photoshop'],
+  devTools: ['Github', 'Redux-Dev Tools', 'Gitlab', 'VS Code', 'Codepen' ],
+  skillsDescription: "I like to develop end to end applications with high scalability and architecture. Highly interested in system designing.",
   skills: [
+    {
+      skillname: "C++, C, Javascript"
+    },
     {
       skillname: "HTML5"
     },
@@ -54,29 +69,32 @@ let resumeData = {
       skillname: "CSS3"
     },
     {
-      skillname: "NodeJs"
+      skillname: "Sass"
     },
     {
-      skillname: "ReactJs"
+      skillname: "Node.js"
     },
     {
-      skillname: "ExpressJs"
+      skillname: "React"
     },
     {
-      skillname: "mongoDB"
+      skillname: "Express"
     },
     {
       skillname: "Redux"
     },
     {
-      skillname: "CPP"
+      skillname: "mongoDB"
     },
     {
-      skillname: "photoshop"
+      skillname: "mySQL",
     },
     {
-      skillname: "illustrator"
-    }
+      skillname: "Redis",
+    },
+    {
+      skillname: "Kafka",
+    },
   ],
   portfolio: [
     {
