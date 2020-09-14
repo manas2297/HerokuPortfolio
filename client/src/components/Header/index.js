@@ -9,6 +9,7 @@ import {
   scroller
 } from "react-scroll";
 import {ReactComponent as AvatarLogo} from '../../images/avatar.svg';
+import {ReactComponent as BannerLogo} from '../../images/hero.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Typist from 'react-typist';
 import './header.css';
@@ -42,8 +43,11 @@ const Header = ({resumeData}) => {
                   })}
               </ul>
             </div>
+            <div className="banner-logo">
+              <BannerLogo height="250" className="banner-logo-outline"/>
+            </div>
           </div>
-
+          
           <p className="scrolldown">
             <NavLink
               activeClass="active"
