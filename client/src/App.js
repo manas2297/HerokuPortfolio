@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Header from "./assets/Header";
-import About from "./components/About";
+
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";

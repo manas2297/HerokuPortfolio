@@ -17,13 +17,13 @@ class Landing extends React.Component {
         <Navbar/>
         <Header resumeData={resumeData}/>
         {/* <Header resumeData={resumeData} /> */}
-         {/*
+      
         <Suspense fallback={"Loading"}>
           <About resumeData={resumeData} />
-        </Suspense> */}
+        </Suspense> 
         
-        {/* <Resume resumeData={resumeData} />
-        <Portfolio resumeData={resumeData} />
+         {/* <Resume resumeData={resumeData} /> */}
+        {/*<Portfolio resumeData={resumeData} />
         <Testimonials resumeData={resumeData} /> */}
         {/* <ContactUs resumeData={resumeData} />
         <Footer resumeData={resumeData} /> */}

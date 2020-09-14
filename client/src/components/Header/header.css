@@ -1,3 +1,7 @@
+header{
+  height: max-content !important;
+  padding-bottom: 30px;
+}
 .banner {
   text-align: center;
   display: flex;
@@ -18,7 +22,7 @@
 }
 .avatar{
   margin-top: 0;
-  width: 180px;
+  width: 200px;
   margin: 1em auto;
   padding: 2em 0;
   
@@ -44,10 +48,11 @@
   transition: ease-in 0.1s;
 }
 header .scrolldown a {
-  /* bottom: 6px; */
+  /* bottom: -58%; */
   margin: 0 auto;
+  position: absolute;
   background-color: rgb(20, 28, 58);
-  /* left: 48.2%; */
+  left: 48.2%;
   color: #fff;
   display: block;
   height: 50px;
@@ -66,4 +71,11 @@ header .scrolldown a:hover {
 }
 .scrolldown a > i {
   margin: 10px;
+}
+
+.banner-logo{
+  margin-top: 2em;
+}
+.banner-logo-outline{
+  stroke: black;
 }

@@ -10,7 +10,7 @@ let resumeData = {
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/manas-yadav-mmmut",
-      className: "fa fa-instagram"
+      className: "fa fa-linkedin"
     },
     {
       name: "github",
@@ -24,7 +24,7 @@ let resumeData = {
     }
   ],
   aboutme:
-    "Full Stack Developer and UI designer. Stay motivated and believe in your abilities to excel.",
+    "Working as a Software Developer with an experience of 1.3 years. I have worked with startups, collaborated with talented people to deliver high quality products. I like exploring large scale applications and solving problems through my code. ",
   address: "Bengaluru,India",
   website: "https://mighty-river-90021.herokuapp.com/",
   education: [
