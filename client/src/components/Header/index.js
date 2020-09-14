@@ -8,59 +8,34 @@ import {
   scrollSpy,
   scroller
 } from "react-scroll";
+import {ReactComponent as AvatarLogo} from '../../images/avatar.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Typist from 'react-typist';
-export default class Header extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      animateTextNumber: 1,
-    }
-  }
-  animateText = () => {
-    console.log("here")
-    if(this.state.animateTextNumber === 1) {
-      console.log("here2")
-      this.setState({
-        animateTextNumber: 2,
-      })
-    } else {
-      this.setState({
-        animateTextNumber: 1,
-      })
-    }
-  }
-  render() {
-    console.log(this.state.animateTextNumber)
-    let resumeData = this.props.resumeData;
+import './header.css';
+const Header = ({resumeData}) => {
     return (
       <React.Fragment>
         <header id="home">
+        <FontAwesomeIcon icon={['fas', 'spinner']} size="4x"/>
           <div className="row banner">
             <div className="banner-text">
-            
-              <h1 className="responsive-headline">
-              <Typist
-                  cursor={{show:true, blink: true, element: '|' }}
-                >
-                Hi!!! I am {resumeData.name}. 
-                  </Typist>
-              </h1>
-              <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
-              <Typist
-                avgTypingDelay={20}
-              >
-              <Typist.Delay ms={500}/>
-                {resumeData.role}.{resumeData.roleDescription}
-              </Typist>
+              
+              <h2 className="responsive-headline">
+                {resumeData.role}
+              </h2>
+              <h3>
+                {resumeData.roleDescription}
               </h3>
-              <hr />
+              <div className="avatar">
+                <AvatarLogo className="banner-avatar" viewBox="0 0 600 600"/>
+              </div>
               <ul className="social">
                 {resumeData.socialLinks &&
                   resumeData.socialLinks.map(item => {
                     return (
                       <li key={item.name}>
                         <a href={item.url} target="_blank">
-                          <i className={item.className}></i>
+                          <i className={item.className}/>
                         </a>
                       </li>
                     );
@@ -79,11 +54,12 @@ export default class Header extends Component {
               offset={5}
               duration={800}
             >
-              <i className="icon-down-circle"></i>
+              <i className="fa fa-chevron-down"></i>
             </NavLink>
           </p>
         </header>
       </React.Fragment>
     );
-  }
 }
+
+export default Header;

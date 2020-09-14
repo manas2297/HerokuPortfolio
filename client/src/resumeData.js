@@ -1,16 +1,16 @@
 let resumeData = {
   imagebaseurl: "",
   name: "Manas Yadav",
-  role: "React | Nodejs | UI Designer",
+  role: "Developer . Designer . Coder",
   linkedinId: "https://www.linkedin.com/in/manas-yadav-mmmut",
   skypeid: "Your skypeid",
   roleDescription:
-    "Fullstack developer and a UI designer, who loves to code and learn new technologies.",
+    "I solve your problems through my code, Let's connect. ",
   socialLinks: [
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/manas-yadav-mmmut",
-      className: "fa fa-linkedin"
+      className: "fa fa-instagram"
     },
     {
       name: "github",

@@ -8,9 +8,13 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+import { ReactComponent as Logo } from "../../images/logo.svg";
+import "./navbar.css";
 const Navbar = () => {
   return (
-    <nav id="nav-wrap">
+    <nav className="navbar-wrapper">
+      <Logo className="navbar-logo" />
+
       <ul id="nav" className="nav">
         <li className="current">
           <NavLink
@@ -76,10 +80,10 @@ const Navbar = () => {
             Contact
           </NavLink>
         </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
       </ul>
+      <div className="navbar-blog">
+        <Link to="/blog">Blog</Link>
+      </div>
     </nav>
   );
 };

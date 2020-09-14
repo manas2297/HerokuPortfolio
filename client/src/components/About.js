@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-export default class About extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
+import React from "react";
+// import {ReactComponent as AvatarLogo} from '../images/avatart.svg';
+const About = ({resumeData}) => { 
     return (
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <img className="profile-pic" src="images/manas.jpg" alt="" />
+            {/* <AvatarLogo/> */}
+            {/* <img className="profile-pic" src="https://akshaysaini.in/img/plane.gif" alt="" /> */}
           </div>
           {/*sdsds*/}
           <div className="nine columns main-col">
@@ -29,5 +29,5 @@ export default class About extends Component {
         </div>
       </section>
     );
-  }
-}
+};
+export default About;
