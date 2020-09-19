@@ -96,30 +96,30 @@ let resumeData = {
       skillname: "Kafka",
     },
   ],
-  portfolio: [
+  projects: [
     {
-      name: "project1",
-      description: "ConnectMe",
+      name: "ConnectMe",
+      description: "An platform for developers of showcase their projects, meet & collaborate with other developers.",
       imgurl: "./images/portfolio/connectme.png",
-      projectUrl: "https://www.google.com/"
+      projectUrl: "https://github.com/manas2297"
     },
     {
-      name: "project2",
-      description: "CodeIt",
-      imgurl: "images/portfolio/coffee.jpg",
-      projectUrl: "https://www.google.com/"
+      name: "ProHub",
+      description: "ProHub",
+      imgurl: "./images/portfolio/prohub.png",
+      projectUrl: "https://github.com/manas2297"
     },
+    // {
+    //   name: "project3",
+    //   description: "PortFolio",
+    //   imgurl: "./images/portfolio/judah.jpg",
+    //   projectUrl: "https://www.google.com/"
+    // },
     {
-      name: "project3",
-      description: "PortFolio",
-      imgurl: "images/portfolio/judah.jpg",
-      projectUrl: "https://www.google.com/"
-    },
-    {
-      name: "project4",
-      description: "Node Chat Application",
-      imgurl: "images/portfolio/retrocam.jpg",
-      projectUrl: "https://www.google.com/"
+      name: "VRoom",
+      description: "An online chat application with the ability for video and text chat.",
+      imgurl: "./images/portfolio/vroom.png",
+      projectUrl: "https://github.com/manas2297"
     }
   ],
   testimonials: [

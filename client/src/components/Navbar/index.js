@@ -45,16 +45,16 @@ const Navbar = () => {
           <NavLink
             activeClass="active"
             className="pointer"
-            to="resume"
+            to="projects"
             spy={true}
             smooth={true}
             offset={5}
             duration={800}
           >
-            Resume
+            Projects
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             activeClass="active"
             className="pointer"
@@ -66,7 +66,7 @@ const Navbar = () => {
           >
             Testimonials
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             activeClass="active"
