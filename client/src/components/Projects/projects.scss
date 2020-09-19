@@ -1,0 +1,101 @@
+@import '../../assets/customVars.scss';
+.projects {
+  padding: 7rem 1.5rem;
+  &__grid{
+    padding: 2rem;
+    .card{
+
+    }
+    .image{
+      -webkit-box-shadow: 4px 7px 11px -1px rgba(212,212,212,1);
+      -moz-box-shadow: 4px 7px 11px -1px rgba(212,212,212,1);
+      box-shadow: 4px 7px 11px -1px rgb(172, 172, 172);
+      overflow: hidden;
+      border-radius: 14px;
+      height: 100%;
+      // width: 100%;
+      img{
+        transform: scale(1);
+        transition: .25s ease-in-out;
+        height: 100%;
+        width:100%;
+      }
+      figcaption{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0rem 3rem;
+        color: #fff;
+        z-index: 1;
+        h1{
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        h2{
+          font-size: 1.3rem;
+        }
+        a{
+          text-decoration: none;
+          color:#fff;
+          background-color: $awe-dark;
+          width: max-content;
+          padding: 0.5em 1em;
+          margin: 0 auto;
+          border-radius: 20px;
+          font-size: 0.8em;
+          transition: 0.2s ease-in ;
+          &:hover{
+            background-color: $awe-light;
+            transition: 0.2s ease-in ;
+          }
+        }
+      }
+      figcaption,
+      .overlay{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      .overlay{
+        border-radius: 14px;
+        background-color: #3cb0f2;
+      }
+      // &:hover figcaption,.overlay {
+      //   opacity: 1;
+      // }
+      &:hover {
+        overflow:hidden !important;
+        border-radius: 14px;
+        img{
+          transform: scale(1.1);
+        }
+        figcaption, .overlay{
+          border-radius: 14px;
+          opacity:1;
+        }
+      }
+    }
+  }
+  .button {
+    padding: 0.8em 3em;
+    text-decoration: none;
+    color: $primary-theme;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.2s ease-in;
+    &:hover{
+      background-color: $primary-theme;
+      color: white;
+      transition: 0.2s ease-in;
+    }
+  }
+  .is-outlined {
+    border: 2px solid $primary-theme;
+    border-radius: 30px;
+  }
+}
