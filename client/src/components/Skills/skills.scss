@@ -11,9 +11,6 @@
     .column{
       padding: 2.5rem 2rem;
       border-right: 1px solid $border-grey ;
-      &:first-child{
-        
-      }
       &:last-child{
         border-right: none;
       }

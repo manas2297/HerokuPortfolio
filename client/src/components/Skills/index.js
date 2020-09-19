@@ -13,7 +13,7 @@ const Skills = ({resumeData}) => {
   const devTools = resumeData.devTools.join(', ');
   return(
     <section id="skills" className="skills has-text-centered">
-      <Container className="is-narrow">
+      <Container>
         <Box className="skills__box">
           <Content>
             <Columns>
