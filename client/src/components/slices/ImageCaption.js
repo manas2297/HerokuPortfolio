@@ -1,6 +1,6 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
-
+import './styles.scss';
 export default class ImageCaption extends React.Component {
   state = {
     imageUrl: this.props.slice.primary.image.url,

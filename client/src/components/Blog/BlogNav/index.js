@@ -5,14 +5,14 @@ import { Bars, ClearIcon, Hamburger } from 'components/Icons';
 import { ReactComponent as AvatarLogo } from '../../../images/avatar.svg';
 import { Link } from 'react-router-dom';
 import resumeData from 'resumeData';
-const BlogNav = () => {
+const BlogNav = ({linkTo, linkText}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <React.Fragment>
       <div className="blog-nav">
         <Logo stroke="#fff" fill="white" className="blog-logo" />
         <div className="blog-link">
-          <Link to="/">Home</Link>
+          <Link to={linkTo || '/'}>{linkText}</Link>
         </div>
         <div
           className="blog-menu"

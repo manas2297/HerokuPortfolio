@@ -24,10 +24,6 @@ class Landing extends React.Component {
         <Skills resumeData={resumeData}/>
         <Projects resumeData={resumeData}/>
         <Contact/>
-         {/* <Resume resumeData={resumeData} /> */}
-        {/*<Portfolio resumeData={resumeData} />
-        <Testimonials resumeData={resumeData} /> */}
-        <Contact/>
         <ContactSide/>
         {/* <Footer resumeData={resumeData} /> */}
       </React.Fragment>

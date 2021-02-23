@@ -1,0 +1,17 @@
+@import '../../sass/global';
+.post-part{
+  
+  .block-img{
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    p{
+      font-weight: 500;
+      font-size: 1rem;
+      color: #888888;
+      text-decoration: underline;
+      color: $dark-back2;
+    }
+  }
+}

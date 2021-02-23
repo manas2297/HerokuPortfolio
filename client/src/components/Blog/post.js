@@ -6,6 +6,7 @@ import ImageCaption from "../slices/ImageCaption";
 import Text from "../slices/Text";
 import Quote from "../slices/Quote";
 import config from "../../config/prismic-configuration";
+import BlogNav from "./BlogNav";
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -50,24 +51,28 @@ class Post extends React.Component {
     console.log(this.props);
     let titled = this.state.doc ? this.state.doc.data.title.length !== 0 : null;
     return this.state.doc ? (
-      <div className="main">
-        {/* <Helmet>
-          <title>
-            {titled ? RichText.asText(this.state.doc.data.title) : "Untitled"}
-          </title>
-        </Helmet> */}
-        <div className="outer-container">
+      <div className="post-main">
+        <div className="post-nav">
+          <BlogNav linkText="Blogs List" linkTo="/blog"/>
+        </div>
+        <div className="post-wrapper">
+          <div className="post-wrapper-card">
+            <div className="post-wrapper-card-heading">
+              <h1 data-wio-id={this.state.doc.id}>
+                {titled ? RichText.asText(this.state.doc.data.title) : "Untitled"}
+              </h1>
+            </div>
+            <div className="post-wrapper-card-content">
+              {this.renderSliceZone(this.state.doc.data.body)}
+            </div>
+          </div>
+        </div>
+          
+        
+        {/* <div className="outer-container">
           <div className="back">
             <a href="/blog">back to list</a>
-          </div>
-          {/* Render the edit button */}
-          <h1 data-wio-id={this.state.doc.id}>
-            {titled ? RichText.asText(this.state.doc.data.title) : "Untitled"}
-          </h1>
-        </div>
-        {/* Go through the slices of the post and render the appropiate one */}
-        {this.renderSliceZone(this.state.doc.data.body)}
-        {/* <Footer /> */}
+          </div> */}
       </div>
     ) : null;
   }

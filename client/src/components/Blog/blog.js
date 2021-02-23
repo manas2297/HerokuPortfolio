@@ -140,7 +140,7 @@ class Blog extends React.Component {
     return this.state.doc ? (
       <div className="blog">
         {/* <h1>{RichText.asText(this.state.doc.data.headline)}</h1> */}
-        <BlogNav/>
+        <BlogNav linkText="Home"/>
         <ContactSide/>
         {this.blogHomeHead()}
         {this.blogPostsSection()}
