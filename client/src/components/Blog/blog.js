@@ -50,19 +50,19 @@ class Blog extends React.Component {
       slice => slice.slice_type === "text"
     );
     if (firstTextSlice != null) {
-      const textLimit = 100;
+      const textLimit = 240;
       let text = RichText.asText(firstTextSlice.primary.text);
       let limitedText = text.substring(0, textLimit);
       if (text.length > textLimit) {
         // Cut only up to the last word and attach '...' for readability
         return (
-          <p>
+          <p className="blog-post-para">
             {limitedText.substring(0, limitedText.lastIndexOf(" ")) + "..."}
           </p>
         );
       } else {
         // If it's shorter than the limit, just show it normally
-        return <p>{text}</p>;
+        return <p className="blog-post-para">{text}</p>;
       }
     } else {
       return null;
@@ -79,17 +79,15 @@ class Blog extends React.Component {
           /* Store the date as a Date object so we can format it to whatever we need */
           let postDate = Date(post.data.date);
           /* Default title when post has no title set */
-          const defaultTitle = [<h1 key="title">Untitled</h1>];
+          const defaultTitle = (post.data.title.length !== 0 ? RichText.render(post.data.title, config.linkResolver) : <h1 key="title">Untitled</h1>);
+          const titleChar = post.data.title[0].text.substring(0,1);
           return (
             <div className="blog-post" data-wio-id={post.id} key={post.id}>
-              <h2>
+              <a href={config.linkResolver(post)}>
                 {/* We render a link to a particular post using the linkResolver for the url and its title */}
-                <a href={config.linkResolver(post)}>
-                  {post.data.title.length !== 0
-                    ? RichText.render(post.data.title, config.linkResolver)
-                    : defaultTitle}
-                </a>
-              </h2>
+                  {defaultTitle}
+              </a>
+              <div className="post-letter">{titleChar}</div>
               <p className="blog-post-meta">
                 <time className="created-at">
                   {/* Format the date to M d, Y */}
@@ -104,6 +102,14 @@ class Blog extends React.Component {
               </p>
               {/* Renders a small preview of the post's text */}
               {this.firstParagraph(post)}
+              <div className="blog-post-grp">
+                
+                  <a  className="btn read-on" href={config.linkResolver(post)}>Read On</a>
+                
+                
+                  <a className="btn read-later" href={config.linkResolver(post)}>Read Later</a>
+                
+              </div>
             </div>
           );
         })}
