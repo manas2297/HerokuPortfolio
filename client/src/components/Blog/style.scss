@@ -1,0 +1,92 @@
+@import '../../sass/global';
+.blog{
+  // padding: 80px 90px;
+  display: flex;
+  flex-direction: column;
+  .contact_side{
+    left: 0;
+    right: auto;
+    &__icon{
+      background: white;
+      box-shadow: 0px 1px 10px 0 rgba(61, 30, 4, 0.349);
+      .btn-icon{
+        color: $swiggy  !important;
+        
+      }
+    }
+  }
+  &__home{
+    padding: 0px 70px;
+    color: white;
+    background-color: $swiggy;
+    height: 100vh;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    &__container{
+      display: flex;
+      padding-top: 180px;
+      flex-direction: column;
+
+      .blog-avatar{
+        margin: 0 auto;
+        height: 200px;
+        width: auto;
+        background-position: center;
+        background-size: cover;
+
+      }
+      &--content{
+        text-align: center;
+        .blog-title{
+          font-size: 2.7rem;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 500;
+        }
+        .blog-description{
+          font-size: 1.7rem;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+        }
+      }
+      
+    }
+  }
+  &-main-bg{
+    padding: 0px 90px;
+    background-color: $grey-bg;
+    position: relative;
+    .blog-main{
+      position: relative;
+      top:-90px;
+      padding: 30px 40px;
+      height: 400px;
+      background: #ffffff;
+      box-shadow: 0 30px 30px 0 rgba(49, 49, 49, 0.295);
+      &-head{
+        margin: 0 auto;
+        text-align: center;
+        padding: 60px 0;
+        h3{
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          position: relative;
+          &::after{
+
+            content: '';
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -10px;
+            width: 100px;
+            height: 2px;
+            background: $swiggy;
+          }
+        }
+      }
+    }
+  }
+}

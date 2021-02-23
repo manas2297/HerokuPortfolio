@@ -13,7 +13,7 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
-      <Logo className="navbar-logo" />
+      <Logo fill="#43b0f2" stroke="#43b0f2" className="navbar-logo" />
 
       <ul id="nav" className="nav">
         <li className="current">

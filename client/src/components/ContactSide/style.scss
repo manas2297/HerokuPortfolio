@@ -1,0 +1,30 @@
+@import '../../sass/global';
+.contact_side{
+  
+  position: fixed;
+  top:40%;
+  right:0;
+  display: flex;
+  z-index: 100;
+  // background-color: $primary-blue;
+  &__icon{
+    width: 50px;
+    height: 50px;
+    background-color: $primary-blue;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+    font-size: 1.5rem;
+    box-shadow: -1px 0 3px 0px #081d24c0;
+    .btn-icon{
+      display: block;
+      margin: 0 auto;
+      transition: all 0.4s;
+      &:hover{
+        transform: rotate(90deg);
+        transition: all 0.4s;
+      }
+    }
+  }
+}

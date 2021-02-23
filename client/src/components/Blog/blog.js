@@ -2,8 +2,10 @@ import React from "react";
 import Prismic from "prismic-javascript";
 import { Date, Link, RichText } from "prismic-reactjs";
 import config from "../../config/prismic-configuration";
-import "../../assets/blog.css";
+import "./style.scss";
 import Client from "../../config/PrismicApp";
+import BlogNav from "./BlogNav";
+import ContactSide from "components/ContactSide";
 // function client() {}
 
 class Blog extends React.Component {
@@ -68,8 +70,11 @@ class Blog extends React.Component {
   };
   blogPostsSection() {
     return (
+      <div className="blog-main-bg">
       <div className="blog-main">
-        {/* Working from the array of all blog posts, we process each one */}
+        <div className="blog-main-head">
+          <h3>Latest Posts</h3>
+        </div>
         {this.state.posts.map(post => {
           /* Store the date as a Date object so we can format it to whatever we need */
           let postDate = Date(post.data.date);
@@ -103,36 +108,38 @@ class Blog extends React.Component {
           );
         })}
       </div>
+      </div>
     );
   }
   blogHomeHead() {
-    // Using the queried blog_home document data, we render the top section
-    const avatar = {
-      backgroundImage: "url(" + this.state.doc.data.image.url + ")"
-    };
+    const avatar = this.state.doc.data.image.url;
     return (
-      <div className="home">
-        <div className="blog-avatar" style={avatar}></div>
-        <h1 className="blog-title">
-          {RichText.asText(this.state.doc.data.headline)}
-        </h1>
-        <p className="blog-description">
-          {RichText.asText(this.state.doc.data.description)}
-        </p>
+      <div className="blog__home">
+        <div className="blog__home__container">
+          <img className="blog-avatar" src={avatar} alt="bg"/>
+          <div className="blog__home__container--content">
+            <h1 className="blog-title">
+              {RichText.asText(this.state.doc.data.headline)}
+            </h1>
+            <p className="blog-description">
+              {RichText.asText(this.state.doc.data.description)}
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
   render() {
-    console.log(this.state.doc);
 
     return this.state.doc ? (
-      <div>
+      <div className="blog">
         {/* <h1>{RichText.asText(this.state.doc.data.headline)}</h1> */}
-
+        <BlogNav/>
+        <ContactSide/>
         {this.blogHomeHead()}
         {this.blogPostsSection()}
       </div>
-    ) : null;
+    ) : 'Loading....';
   }
 }
 

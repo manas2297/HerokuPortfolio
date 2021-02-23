@@ -9,6 +9,8 @@ import Footer from "../Footer";
 import Header from '../Header'
 import Skills from "../Skills";
 import Projects from "../Projects";
+import Contact from "components/Contact";
+import ContactSide from "components/ContactSide";
 const About = React.lazy(() => import('../About'));
 class Landing extends React.Component {
   render() {
@@ -24,8 +26,9 @@ class Landing extends React.Component {
          {/* <Resume resumeData={resumeData} /> */}
         {/*<Portfolio resumeData={resumeData} />
         <Testimonials resumeData={resumeData} /> */}
-        {/* <ContactUs resumeData={resumeData} />
-        <Footer resumeData={resumeData} /> */}
+        <Contact/>
+        <ContactSide/>
+        {/* <Footer resumeData={resumeData} /> */}
       </React.Fragment>
     );
   }
