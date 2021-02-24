@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "manas-portfolio",
+  "homepage": "https://www.codes.ninja",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,3 +1,4 @@
+@import '../../sass/global';
 .navbar-wrapper {
   font: 12px "opensans-bold", sans-serif;
   width:100%;
@@ -10,7 +11,12 @@
   text-align: center;
   padding: 0 4em;
   align-items: center;
+  
+  
 };
+.navbar-bars, .nav-sidebar{
+  display: none;
+}
 
 .nav{
   min-height: 48px;
@@ -61,4 +67,64 @@ ul li.current a{
   color: white;
   background-color: #3cb0f2;
   transition: ease-in 0.2s;
+}
+
+@media screen and (max-width: 426px) {
+  .nav, .navbar-blog{
+    display: none;
+  }
+  .navbar-wrapper {
+    .navbar-bars{
+      display: block;
+      font-size: 1.5rem;
+      color: $primary-blue;
+
+    }
+    
+  }
+  .nav-sidebar{
+    position: fixed;
+    background: white;
+    top:0;
+    right:0;
+    width: 250px;
+    height: 100%;
+    z-index: 10000;
+    overflow-y: hidden;
+    box-shadow: 1px 0 10px 0 #71727271;
+    display: flex;
+    flex-direction: column;
+    &-head{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 25px;
+      background: $primary-blue;
+      color: white;
+      align-items: center;
+      h3{
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+    }
+    &-links{
+      padding: 20px 25px;
+      display: flex;
+      flex-direction: column;
+      a{
+        padding: 15px 10px;
+        text-transform: uppercase;
+        color: $dark-back2;
+        &:hover{
+          background: $primary-blue;
+          color: white;
+        }
+      }
+    }
+  }
+  .open{
+    display: block;
+  }
+  .close{
+    display: none;
+  }
 }

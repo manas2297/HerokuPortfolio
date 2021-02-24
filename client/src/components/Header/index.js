@@ -12,7 +12,7 @@ import {ReactComponent as AvatarLogo} from '../../images/avatar.svg';
 import {ReactComponent as BannerLogo} from '../../images/hero.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Typist from 'react-typist';
-import './header.css';
+import './header.scss';
 const Header = ({resumeData}) => {
     return (
       <React.Fragment>

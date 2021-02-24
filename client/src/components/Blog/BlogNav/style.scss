@@ -37,6 +37,14 @@
       // background: $dark-back2;
     }
   }
+  @media screen and (max-width: 426px) {
+    padding: 0 1rem;
+    .blog-link{
+      a{
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 .side-close{
   width: 0;
@@ -50,11 +58,17 @@
   width: 400px;
   transition: all 0.3s;
   opacity: 1;
+  @media screen and (max-width: 426px) {
+    width: 300px;
+  }
 }
 .blog-side{
   position: fixed;
   height: 100%;
   overflow-y: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  }
   background: white;
   z-index: 9999;
   right:0;
