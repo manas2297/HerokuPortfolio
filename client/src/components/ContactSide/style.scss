@@ -2,12 +2,186 @@
 .contact_side{
   
   position: fixed;
-  top:40%;
+  top:20%;
   right:0;
   display: flex;
   z-index: 100;
   // background-color: $primary-blue;
+  &__forms{
+    box-shadow: -2px 0 8px 0px #20212281;
+    z-index: 101;
+    .contact__container{
+      background: white;
+      width:700px;
+      height:500px;
+      display: flex;
+      color: white;
+      &-left{
+        width: 60%;
+        padding: 20px 30px;
+        color: $dark-back2;
+        .btn{
+          padding: 10px 20px;
+          background: $blue-dark;
+          width: max-content;
+          color: white;
+          border-radius: 30px;
+          text-align: center;
+          width: 140px;
+          font-weight: 500;
+          font-size: 1.1rem;
+          letter-spacing: 1.2px;
+          &:hover{
+            background: $primary-blue;
+            cursor: pointer;
+          }
+        }
+        .left-form{
+          display: flex;
+          flex-direction: column;
+          // flex-wrap: wrap;
+          justify-content: space-between;
+          .input{
+            padding: 7px 8px;
+            p{
+              font-weight: 500;
+              font-size: 0.9rem;
+            }
+            textarea{
+              padding: 10px 0;
+              width:100%;
+              outline: none;
+              resize: none;
+              overflow: auto;
+              border: none;
+              &::placeholder{
+                color: rgb(184, 184, 184);
+                font-size: 0.8rem;
+              }
+              &:focus{
+                background: none;
+                border-bottom-color:$primary-blue ;
+              }
+              border-bottom: 1px solid rgba(46, 45, 45, 0.507);
+            }
+            input{
+              width: 100%;
+              padding: 10px 0px;
+              color: $dark-back2;
+              font-size: 1.1rem;
+              border:none;
+              border-bottom: 1px solid rgba(46, 45, 45, 0.507);
+              outline: none;
+              &::placeholder{
+                color: rgb(184, 184, 184);
+                font-size: 0.8rem;
+              }
+              // &:hover{
+              //   border-bottom-color: $primary-blue;
+              // }
+              &:focus{
+                background: none;
+                border-bottom-color:$primary-blue ;
+              }
+
+            }
+          }
+        }
+      }
+      &-right{
+        padding: 20px 30px;
+        width: 42%;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius:  15px;
+        background: $blue-dark;
+        position: relative;
+        .contact-c2{
+          position: absolute;
+          bottom:10%;
+          right: 25%;
+          opacity: 0.9;
+          background: $primary-blue;
+          width: 90px;
+          border-radius: 50%;
+          height:90px;
+          z-index: 104;
+        }
+        .contact-c1{
+          position: absolute;
+          bottom: 0;
+          right:0;
+          border-bottom-right-radius: 15px;
+          background: $primary-blue;
+          width: 200px;
+          height:200px;
+          z-index: 104;
+          clip-path: circle(60% at 100% 100%);
+          opacity: 0.7;
+        }
+        .contact-c3{
+          z-index: 103;
+          position: absolute;
+          bottom: 0;
+          right:0;
+          border-bottom-right-radius: 15px;
+          background: $blue-3;
+          width: 200px;
+          height:200px;
+          
+          clip-path: circle(75% at 100% 100%);
+
+        }
+        .contact__head{
+          h3{
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            padding-bottom: 15px;
+          }
+          p{
+            font-size: 0.9rem;
+            color: $text-sub;
+          }
+        }
+        .contact__content{
+          padding: 20px 0;
+          .content-info{
+            padding: 10px 0;
+            display: flex;
+            svg{
+              font-size: 1.4rem;
+              color: $primary-blue
+            }
+            p{
+              padding: 0 14px;
+
+              letter-spacing: 1px;
+            }
+          }
+        }
+        .contact-social{
+          margin-top: 8.5em;
+            a{
+              font-size: 1.32rem;
+              margin: 0 4px;
+              color: white;
+              padding: 5px;
+              &:hover{
+                color: $primary-blue;
+              }
+            }
+            
+          
+        }
+      }
+    }
+  }
+  .close{
+    display: none;
+  }
   &__icon{
+    
+    z-index: 102;
     width: 50px;
     height: 50px;
     background-color: $primary-blue;
@@ -16,7 +190,7 @@
     color: white;
     padding-top: 8px;
     font-size: 1.5rem;
-    box-shadow: -1px 0 3px 0px #081d24c0;
+    box-shadow: -1px 0 2px 0px #081d24c0;
     .btn-icon{
       display: block;
       margin: 0 auto;

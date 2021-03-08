@@ -20,7 +20,7 @@ const App = props => (
         <Landing />
       </Route>
       <Route exact path="/blog">
-        <Blog />
+        <Blog resumeData={resumeData} />
       </Route>
       <Route exact path="/blog/:uid" component={Post} />
     </Switch>

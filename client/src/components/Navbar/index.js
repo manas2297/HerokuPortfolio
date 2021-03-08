@@ -11,7 +11,7 @@ import {
 } from 'react-scroll';
 import { ReactComponent as Logo } from '../../images/logo.svg';
 import './navbar.scss';
-const Navbar = () => {
+const Navbar = (props) => {
   const [sidebar, setSidebar] = useState(false);
   return (
     <>

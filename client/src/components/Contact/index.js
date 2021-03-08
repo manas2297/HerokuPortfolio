@@ -4,7 +4,7 @@ import Container from 'react-bulma-components/lib/components/container/container
 import Box from 'react-bulma-components/lib/components/box';
 import './contact.scss';
 
-const Contact = () => {
+const Contact = ({handleContact}) => {
   return (
     <section id="contact" className="contact has-text-centered">
       <Container className="is-narrow">
@@ -21,7 +21,7 @@ const Contact = () => {
               </p>
             </Level.Item>
             <Level.Item className="column">
-            <a  className="button is-outlined" href="https://www.github.com/manas2297">Contact Me</a>
+            <a  className="button is-outlined" onClick={() => handleContact()}>Contact Me</a>
             </Level.Item>
           </Level>
         </Box>

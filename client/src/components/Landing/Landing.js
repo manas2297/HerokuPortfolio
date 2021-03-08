@@ -13,18 +13,31 @@ import Contact from "components/Contact";
 import ContactSide from "components/ContactSide";
 const About = React.lazy(() => import('../About'));
 class Landing extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isContactOpen: false,
+    };
+  }
+  handleContact = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      isContactOpen: !prevState.isContactOpen,
+    }));
+  }
   render() {
+    const { isContactOpen } = this.state;
     return (
       <React.Fragment>
-        <Navbar/>
+        <Navbar resumeData={resumeData}/>
         <Header resumeData={resumeData}/>
         <Suspense fallback={"Loading"}>
           <About resumeData={resumeData} />
         </Suspense> 
         <Skills resumeData={resumeData}/>
         <Projects resumeData={resumeData}/>
-        <Contact/>
-        <ContactSide/>
+        <Contact handleContact={this.handleContact}/>
+        <ContactSide handleContact={this.handleContact} resumeData={resumeData} isContactOpen={isContactOpen}/>
         {/* <Footer resumeData={resumeData} /> */}
       </React.Fragment>
     );
