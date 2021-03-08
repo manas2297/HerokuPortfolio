@@ -24,9 +24,9 @@ let resumeData = {
     }
   ],
   aboutme:
-    "I'm Software Developer with an industry experience of 1.3 years. I have worked with startups, collaborated with talented people to deliver high quality products. I like exploring large scale applications and solving problems through my code. ",
+    "I'm Software Developer with an industry experience of 1.8 years. I have worked with startups, collaborated with talented people to deliver high quality products. I like exploring large scale applications and solving problems through my code. ",
   address: "Bengaluru,India",
-  website: "https://mighty-river-90021.herokuapp.com/",
+  website: "https://www.codes.ninja",
   education: [
     {
       UniversityName: "Madan Mohan Malaviya University Of Technology",
@@ -57,7 +57,7 @@ let resumeData = {
   designSkills: ['Web', 'UI', 'UX', 'Logos', 'Posters'],
   designTools:['Figma', 'Adobe illustrator', 'Adobe Photoshop'],
   devTools: ['Github', 'Redux-Dev Tools', 'Gitlab', 'VS Code', 'Codepen' ],
-  skillsDescription: "I like to develop end to end applications with high scalability and architecture. Highly interested in system designing.",
+  skillsDescription: "I like to develop end to end applications with high scalability and good architecture. Highly interested in system designing.",
   skills: [
     {
       skillname: "C++, C, Javascript"
